@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.LoginActivity">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:src="@drawable/logo"
+            android:layout_margin="4dp"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"/>
+
+        <TextView
+            android:textSize="32sp"
+            android:fontFamily="@font/abril_fatface"
+            android:textColor="@color/purple_700"
+            android:text="Welcome Back !!!"
+            android:layout_marginTop="4dp"
+            android:layout_marginStart="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:layout_marginTop="10dp"
+            android:text="Let's get started"
+            android:layout_marginStart="24dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <soup.neumorphism.NeumorphCardView
+            android:layout_margin="20dp"
+            style="@style/Widget.Neumorph.CardView"
+            app:neumorph_shapeType="basin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:background="@android:color/transparent"
+                android:singleLine="true"
+                android:padding="16dp"
+                android:hint="Username"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+        </soup.neumorphism.NeumorphCardView>
+
+        <soup.neumorphism.NeumorphCardView
+            android:layout_marginHorizontal="20dp"
+            style="@style/Widget.Neumorph.CardView"
+            app:neumorph_shapeType="basin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:background="@android:color/transparent"
+                android:singleLine="true"
+                android:padding="16dp"
+                android:hint="Password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+        </soup.neumorphism.NeumorphCardView>
+
+        <TextView
+            android:layout_gravity="end"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:layout_marginTop="10dp"
+            android:text="Forget Password ?"
+            android:layout_marginEnd="30dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <soup.neumorphism.NeumorphCardView
+            android:id="@+id/login_card"
+            android:layout_marginTop="40dp"
+            android:layout_gravity="center"
+            style="@style/Widget.Neumorph.CardView"
+            app:neumorph_shapeType="flat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_gravity="center"
+                android:paddingVertical="10dp"
+                android:paddingHorizontal="40dp"
+                android:textSize="18sp"
+                android:text="Sign-In"
+                android:textColor="@color/purple_700"
+                android:textStyle="bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </soup.neumorphism.NeumorphCardView>
+
+        <TextView
+            android:layout_marginTop="80dp"
+            android:layout_gravity="center"
+            android:paddingVertical="10dp"
+            android:paddingHorizontal="40dp"
+            android:textSize="16sp"
+            android:text="Don't have an Account ? Sign-Up"
+            android:textColor="@color/purple_700"
+            android:textStyle="bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+</ScrollView>
