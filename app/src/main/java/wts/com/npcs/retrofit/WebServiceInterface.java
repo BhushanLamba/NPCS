@@ -2,14 +2,10 @@ package wts.com.npcs.retrofit;
 
 import com.google.gson.JsonObject;
 
-import okhttp3.MultipartBody;
 import retrofit2.Call;
 import retrofit2.http.Field;
 import retrofit2.http.FormUrlEncoded;
-import retrofit2.http.Header;
-import retrofit2.http.Multipart;
 import retrofit2.http.POST;
-import retrofit2.http.Part;
 
 public interface WebServiceInterface {
 
@@ -32,4 +28,32 @@ public interface WebServiceInterface {
     @FormUrlEncoded
     @POST("FetchoperatorMaster")
     Call<JsonObject> getOperators(@Field("ServiceId") String ServiceId);
+
+    @FormUrlEncoded
+    @POST("DoRecharge")
+    Call<JsonObject> doRecharge(@Field("UserKey") String UserKey,
+                                @Field("Amount") String Amount,
+                                @Field("ServiceType") String ServiceType,
+                                @Field("MobileNo") String MobileNo,
+                                @Field("OperatorId") String OperatorId,
+                                @Field("PayBy") String PayBy);
+
+    @FormUrlEncoded
+    @POST("FetchCommonReport")
+    Call<JsonObject> getReport(@Field("UserKey") String UserKey,
+                               @Field("FromDate") String FromDate,
+                               @Field("ToDate") String ToDate,
+                               @Field("TransactionId") String TransactionId,
+                               @Field("Status") String Status,
+                               @Field("MobileNo") String MobileNo,
+                               @Field("AccountNo") String AccountNo,
+                               @Field("ParentId") String ParentId,
+                               @Field("ServiceName") String ServiceName);
+
+    @FormUrlEncoded
+    @POST("FetchCrDrReport")
+    Call<JsonObject> crDrReport(@Field("UserKey") String UserKey,
+                                @Field("FromDate") String FromDate,
+                                @Field("ToDate") String ToDate,
+                                @Field("SearchType") String SearchType);
 }

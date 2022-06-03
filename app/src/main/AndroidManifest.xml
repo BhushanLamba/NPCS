@@ -13,6 +13,15 @@
         android:theme="@style/Theme.NetPeTestingProject"
         android:usesCleartextTraffic="true">
         <activity
+            android:name=".activities.CreditDebitReportActivity"
+            android:exported="true" />
+        <activity
+            android:name=".activities.RechargeReportActivity"
+            android:exported="true" />
+        <activity
+            android:name=".activities.ShareReportActivity"
+            android:exported="true" />
+        <activity
             android:name=".activities.RechargeActivity"
             android:exported="true" />
         <activity

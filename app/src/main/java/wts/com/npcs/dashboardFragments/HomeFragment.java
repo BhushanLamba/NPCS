@@ -37,7 +37,7 @@ public class HomeFragment extends Fragment {
     String userKey;
     SharedPreferences sharedPreferences;
     
-    NeumorphCardView prepaidCard;
+    NeumorphCardView prepaidCard,dthCard;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -56,10 +56,18 @@ public class HomeFragment extends Fragment {
     }
 
     private void handleClickEvents() {
+
         prepaidCard.setOnClickListener(v->
         {
             Intent intent=new Intent(getContext(),RechargeActivity.class);
             intent.putExtra("service","Prepaid");
+            startActivity(intent);
+        });
+
+        dthCard.setOnClickListener(v->
+        {
+            Intent intent=new Intent(getContext(),RechargeActivity.class);
+            intent.putExtra("service","DTH");
             startActivity(intent);
         });
     }
@@ -123,5 +131,6 @@ public class HomeFragment extends Fragment {
         imageSlider = view.findViewById(R.id.image_slider);
         tvBalance = view.findViewById(R.id.tv_balance);
         prepaidCard = view.findViewById(R.id.prepaid_card);
+        dthCard = view.findViewById(R.id.dth_card);
     }
 }
