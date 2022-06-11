@@ -20,6 +20,7 @@
             android:layout_height="wrap_content">
 
             <soup.neumorphism.NeumorphButton
+                android:id="@+id/add_money_btn"
                 style="@style/Widget.Neumorph.Button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -323,6 +324,7 @@
             app:layout_constraintBottom_toBottomOf="parent">
 
             <soup.neumorphism.NeumorphCardView
+                android:id="@+id/electricity_card"
                 style="@style/Widget.Neumorph.CardView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

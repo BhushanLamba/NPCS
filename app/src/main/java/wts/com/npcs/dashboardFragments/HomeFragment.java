@@ -25,8 +25,11 @@ import java.util.ArrayList;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
+import soup.neumorphism.NeumorphButton;
 import soup.neumorphism.NeumorphCardView;
 import wts.com.npcs.R;
+import wts.com.npcs.activities.AddMoneyActivity;
+import wts.com.npcs.activities.ElectricityActivity;
 import wts.com.npcs.activities.RechargeActivity;
 import wts.com.npcs.retrofit.RetrofitClient;
 
@@ -37,7 +40,8 @@ public class HomeFragment extends Fragment {
     String userKey;
     SharedPreferences sharedPreferences;
     
-    NeumorphCardView prepaidCard,dthCard;
+    NeumorphCardView prepaidCard,dthCard,electricityCard;
+    NeumorphButton addMoneyBtn;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -57,6 +61,11 @@ public class HomeFragment extends Fragment {
 
     private void handleClickEvents() {
 
+        addMoneyBtn.setOnClickListener(v->
+        {
+            startActivity(new Intent(getContext(), AddMoneyActivity.class));
+        });
+
         prepaidCard.setOnClickListener(v->
         {
             Intent intent=new Intent(getContext(),RechargeActivity.class);
@@ -70,6 +79,13 @@ public class HomeFragment extends Fragment {
             intent.putExtra("service","DTH");
             startActivity(intent);
         });
+
+        electricityCard.setOnClickListener(v->
+        {
+            Intent intent=new Intent(getContext(), ElectricityActivity.class);
+            startActivity(intent);
+        });
+
     }
 
     @Override
@@ -132,5 +148,7 @@ public class HomeFragment extends Fragment {
         tvBalance = view.findViewById(R.id.tv_balance);
         prepaidCard = view.findViewById(R.id.prepaid_card);
         dthCard = view.findViewById(R.id.dth_card);
+        electricityCard = view.findViewById(R.id.electricity_card);
+        addMoneyBtn = view.findViewById(R.id.add_money_btn);
     }
 }

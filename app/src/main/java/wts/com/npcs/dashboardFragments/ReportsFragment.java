@@ -12,12 +12,14 @@ import androidx.fragment.app.Fragment;
 import soup.neumorphism.NeumorphCardView;
 import wts.com.npcs.R;
 import wts.com.npcs.activities.CreditDebitReportActivity;
+import wts.com.npcs.activities.LedgerReportActivity;
+import wts.com.npcs.activities.MyCommissionActivity;
 import wts.com.npcs.activities.RechargeActivity;
 import wts.com.npcs.activities.RechargeReportActivity;
 
 public class ReportsFragment extends Fragment {
 
-    NeumorphCardView prepaidReportLayout,creditReportLayout,debitReportLayout;
+    NeumorphCardView prepaidReportLayout,creditReportLayout,debitReportLayout,myCommissionLayout,ledgerCard;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -48,6 +50,16 @@ public class ReportsFragment extends Fragment {
             startActivity(intent);
         });
 
+        myCommissionLayout.setOnClickListener(v->
+        {
+            startActivity(new Intent(getContext(), MyCommissionActivity.class));
+        });
+
+        ledgerCard.setOnClickListener(v->
+        {
+            startActivity(new Intent(getContext(), LedgerReportActivity.class));
+        });
+
         return view;
     }
 
@@ -55,5 +67,7 @@ public class ReportsFragment extends Fragment {
         prepaidReportLayout = view.findViewById(R.id.prepaid_report_layout);
         creditReportLayout = view.findViewById(R.id.credit_report_layout);
         debitReportLayout = view.findViewById(R.id.debit_report_layout);
+        myCommissionLayout = view.findViewById(R.id.my_commission_card);
+        ledgerCard = view.findViewById(R.id.ledger_card);
     }
 }

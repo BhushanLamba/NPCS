@@ -44,16 +44,19 @@ dependencies {
 
     ////////////////////////////////////////////////////////////////////////
     implementation 'com.github.fornewid:neumorphism:0.3.0'
-    implementation 'com.github.denzcoskun:ImageSlideshow:0.0.7'
+    implementation 'com.github.denzcoskun:ImageSlideshow:0.1.0'
 
-    implementation 'com.squareup.retrofit2:retrofit:2.6.1'
-    implementation 'com.squareup.retrofit2:converter-gson:2.6.1'
+    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
     implementation 'com.squareup.retrofit2:converter-scalars:2.1.0'
-    implementation 'com.squareup.okhttp3:logging-interceptor:4.2.2'
+    implementation 'com.squareup.okhttp3:logging-interceptor:4.9.0'
 
     implementation 'pl.droidsonroids.gif:android-gif-drawable:1.2.23'
 
-    implementation 'com.squareup.picasso:picasso:2.5.2'
+    implementation 'com.squareup.picasso:picasso:2.71828'
+
+    implementation 'com.github.MdFarhanRaja:SearchableSpinner:2.0'
+
 
 
 

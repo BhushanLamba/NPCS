@@ -154,6 +154,7 @@
         android:orientation="horizontal">
 
         <soup.neumorphism.NeumorphCardView
+            android:id="@+id/my_commission_card"
             style="@style/Widget.Neumorph.CardView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -170,13 +171,13 @@
                 <ImageView
                     android:layout_width="40dp"
                     android:layout_height="40dp"
-                    android:src="@drawable/prepaid"
+                    android:src="@drawable/report"
                     app:tint="@color/purple_700" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Prepaid Report"
+                    android:text="My Commission"
                     android:textColor="@color/purple_700" />
 
 
@@ -185,6 +186,7 @@
 
 
         <soup.neumorphism.NeumorphCardView
+            android:id="@+id/ledger_card"
             style="@style/Widget.Neumorph.CardView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -201,13 +203,13 @@
                 <ImageView
                     android:layout_width="40dp"
                     android:layout_height="40dp"
-                    android:src="@drawable/dish"
+                    android:src="@drawable/report"
                     app:tint="@color/purple_700" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="DTH Report"
+                    android:text="Ledger Report"
                     android:textColor="@color/purple_700" />
 
 

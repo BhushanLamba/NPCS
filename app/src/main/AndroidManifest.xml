@@ -2,6 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="wts.com.npcs">
 
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
@@ -12,6 +13,21 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.NetPeTestingProject"
         android:usesCleartextTraffic="true">
+        <activity
+            android:name=".activities.ElectricityActivity"
+            android:exported="true" />
+        <activity
+            android:name=".activities.LedgerReportActivity"
+            android:exported="true" />
+        <activity
+            android:name=".activities.ViewCustomerActivity"
+            android:exported="true" />
+        <activity
+            android:name=".activities.MyCommissionActivity"
+            android:exported="true" />
+        <activity
+            android:name=".activities.AddMoneyActivity"
+            android:exported="true" />
         <activity
             android:name=".activities.CreditDebitReportActivity"
             android:exported="true" />

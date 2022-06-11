@@ -29,13 +29,13 @@
                 <ImageView
                     android:layout_width="40dp"
                     android:layout_height="40dp"
-                    android:src="@drawable/logo"
+                    android:src="@drawable/profile"
                     app:tint="@color/purple_700" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Others"
+                    android:text="Add User"
                     android:textColor="@color/purple_700" />
 
 
@@ -44,6 +44,7 @@
 
 
         <soup.neumorphism.NeumorphCardView
+            android:id="@+id/view_users_card"
             style="@style/Widget.Neumorph.CardView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -60,13 +61,13 @@
                 <ImageView
                     android:layout_width="40dp"
                     android:layout_height="40dp"
-                    android:src="@drawable/logo"
+                    android:src="@drawable/profile"
                     app:tint="@color/purple_700" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Others"
+                    android:text="View Users"
                     android:textColor="@color/purple_700" />
 
 
